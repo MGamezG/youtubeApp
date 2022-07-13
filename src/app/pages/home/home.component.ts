@@ -1,3 +1,4 @@
+import { YoutbeResponse } from './../../models/youtube.models';
 import { YoutubeService } from './../../services/youtube.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -12,7 +13,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(){
    this.youtubeServices.getVideos().subscribe(
-    (response:any) =>{
+    (response:YoutbeResponse) =>{
     console.log(response);
    } );
 
