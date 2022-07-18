@@ -1,2 +1,24 @@
 <h1 class="mt-5">youtube videos</h1>
 <hr>
+<div class="container">
+  <div class="row ">
+    <div class="col-lg-4 col-md-4 col-sm-6 mt-3" *ngFor="let video of videos">
+      <div class="card" style="width: 18rem;">
+        <img [src]="video.snippet.thumbnails.high.url" class="card-img-top" [alt]="video.etag">
+        <div class="card-body">
+          <h5 class="card-title">{{video.snippet.title}}</h5>
+          <p class="card-text"><strong>Autor:</strong>{{video.snippet.channelTitle}}</p>
+          <p><strong>fecha de publicacion</strong>{{video.snippet.publishedAt| date}}</p>
+          <a href="#" class="btn btn-dark d-flex justify-content-center" >ver video</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container2 mt-5">
+  <div class="row">
+    <div class="col ">
+      <button class="btn btn-primary btn-lg"> siguiente</button>
+    </div>
+  </div>
+</div>
